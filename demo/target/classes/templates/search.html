@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for Students</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            margin-top: -8px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>Search for User</h1>
+<form action="/search" method="get" >
+    <label for="id">ID</label>
+    <input type="text" id="id" placeholder="ID" name="id">
+    <div id="error-id" class="error"></div>
+
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" placeholder="First Name" name="firstname">
+    <div id="error-firstname" class="error"></div>
+
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" placeholder="Last Name" name="lastname">
+    <div id="error-lastname" class="error"></div>
+
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender">
+        <option value="">Please choose an option</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <div id="error-gender" class="error"></div>
+
+    <label for="gpa">GPA</label>
+    <input type="text" id="gpa" placeholder="GPA" name="gpa">
+    <div id="error-gpa" class="error"></div>
+
+    <label for="level">Level</label>
+    <input type="text" id="level" placeholder="Level" name="level">
+    <div id="error-level" class="error"></div>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" placeholder="Address" name="address">
+    <div id="error-address" class="error"></div>
+
+    <button type="submit" id="button">Search</button>
+</form>
+</body>
+</html>

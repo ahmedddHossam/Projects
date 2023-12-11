@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Students</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      margin-top: -8px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<h1>Sort Students</h1>
+<form action="/sort" method="post" >
+  <label for="sortField">Sort Field</label>
+  <select name="sortField" id="sortField">
+    <option value="">please choose an option</option>
+    <option value="ID">ID</option>
+    <option value="First Name">First Name</option>
+    <option value="Last Name">Last Name</option>
+    <option value="GPA">GPA</option>
+    <option value="Level">Level</option>
+  </select>
+
+  <br>
+
+  <label for="sortOrder">Sort Order</label>
+  <select name="sortOrder" id="sortOrder">
+    <option value="">please choose an option</option>
+    <option value="ascending">ascending</option>
+    <option value="descending">descending</option>
+  </select>
+
+
+  <button type="submit" id="button">Sort</button>
+</form>
+</body>
+</html>
